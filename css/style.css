@@ -34,6 +34,15 @@ button {
     height: 40px;
     width: 90px;
     background-color: aquamarine;
+
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+a>img:hover {
+    opacity: 0.7;
 }
 
 /* MISC */
