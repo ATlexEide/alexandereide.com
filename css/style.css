@@ -13,31 +13,43 @@ h1.title {
     padding: 30px;
 }
 
-div.desc {
-    display: flex;
-    flex: 1;
-    font-size: 30px;
-}
-
-.info {
+ul {
+    list-style-type: none;
     display: flex;
 }
 
+/* NAVIGATION */
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 60px 0 20px;
+}
 
+button {
+    height: 40px;
+    width: 90px;
+    background-color: aquamarine;
+}
+
+/* MISC */
 p {
     padding: 20px;
     margin: 30px;
-}
-
-p.desc {
-    display: flex;
-    flex: 1 1 0;
 }
 
 p.art {
     display: flex;
     flex: 1 1 auto;
     justify-content: center;
+}
+
+
+/* DESCRIPTION */
+
+div.desc {
+    display: flex;
+    flex: 1;
+    font-size: 30px;
 }
 
 img.desc {
@@ -49,22 +61,40 @@ img.desc {
     align-self: center;
 }
 
-ul {
-    list-style-type: none;
+p.desc {
+    display: flex;
+    flex: 1 1 0;
+}
+
+/* INFO / OCCUPATION ETC */
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+/* LIST OF ALLIES */
+.allies {
+    display: flex;
+    justify-content: center;
+}
+
+div.allies {
     display: flex;
 }
 
-
-
-button {
-    height: 40px;
-    width: 90px;
-    background-color: aquamarine;
+ul.allies {
+    padding: 20px;
+    margin: -20px;
 }
 
-.nav-list {
-    display: flex;
-    flex-direction: column;
-    padding: 0 60px 0 20px;
+ul.allies>li {
+    margin: 5px;
+    padding: 10px;
 
+}
+
+img.allies {
+    width: 80px;
+    height: 80px;
+    border: solid 3px aqua;
 }
