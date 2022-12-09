@@ -1,52 +1,70 @@
-html {
+/* DEFAULT SETTINGS */
+* {
     font-family: Courier, monospace;
+    background-color: aquamarine;
+    /* border: solid 1px; */
 }
+
+h1.title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: -10px -8px 30px -8px;
+    padding: 30px;
+}
+
+div.desc {
+    display: flex;
+    flex: 1;
+    font-size: 30px;
+}
+
+.info {
+    display: flex;
+}
+
+
+p {
+    padding: 20px;
+    margin: 30px;
+}
+
+p.desc {
+    display: flex;
+    flex: 1 1 0;
+}
+
+p.art {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+img.desc {
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    margin: -10px;
+    height: 100px;
+    width: 100px;
+    align-self: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+
 
 button {
+    height: 40px;
+    width: 90px;
     background-color: aquamarine;
-    color: black;
-    height: 30px;
-    width: 80px;
 }
 
-.buttons {
+.nav-list {
     display: flex;
     flex-direction: column;
-    height: auto;
-    width: 75px;
-    align-items: center;
-}
+    padding: 0 60px 0 20px;
 
-
-.container .thumb {
-    display: flex;
-    background: linear-gradient(blue, white);
-    margin: -20px -20px 20px -20px;
-    padding: 30px;
-    font-size: 45px;
-}
-
-.thumb {
-    flex: 1;
-    justify-content: center;
-}
-
-.container .nov {
-    display: flex;
-    background: linear-gradient(rgb(0, 191, 147, 255), rgb(241, 86, 82, 255));
-    margin: -20px -20px 20px -20px;
-    padding: 30px;
-    font-size: 45px;
-}
-
-.nov {
-    flex: 1;
-    justify-content: center;
-}
-
-.buttons {
-    display: flex;
-    flex: 1;
-    list-style: none;
-    gap: 5px;
 }
