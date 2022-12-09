@@ -1,0 +1,52 @@
+html {
+    font-family: Courier, monospace;
+}
+
+button {
+    background-color: aquamarine;
+    color: black;
+    height: 30px;
+    width: 80px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 75px;
+    align-items: center;
+}
+
+
+.container .thumb {
+    display: flex;
+    background: linear-gradient(blue, white);
+    margin: -20px -20px 20px -20px;
+    padding: 30px;
+    font-size: 45px;
+}
+
+.thumb {
+    flex: 1;
+    justify-content: center;
+}
+
+.container .nov {
+    display: flex;
+    background: linear-gradient(rgb(0, 191, 147, 255), rgb(241, 86, 82, 255));
+    margin: -20px -20px 20px -20px;
+    padding: 30px;
+    font-size: 45px;
+}
+
+.nov {
+    flex: 1;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    gap: 5px;
+}
