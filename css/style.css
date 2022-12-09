@@ -5,6 +5,11 @@
     /* border: solid 1px; */
 }
 
+#ponytown {
+    display: flex;
+    justify-content: center;
+}
+
 h1.title {
     text-align: center;
     display: flex;
