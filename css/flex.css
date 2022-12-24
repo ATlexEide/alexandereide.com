@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    border: red solid 2px;
+    justify-content: center;
+}
+
+.box {
+    border: yellow solid 1px;
+    flex: 1;
+    background-color: grey;
+    color: white;
+}
