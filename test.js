@@ -1,4 +1,1 @@
-const myInt = 5;
-const myFloat = 6.667;
-myint;
-myFloat;
+let answer = parseInt(prompt("Please enter the number you'd like to FizzBuzz up to: "))
