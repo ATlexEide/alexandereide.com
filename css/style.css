@@ -5,6 +5,8 @@
     /* border: solid 1px; */
 }
 
+
+
 #ponytown {
     display: flex;
     justify-content: center;
@@ -24,10 +26,36 @@
     margin: 5px 0px 0px 0px;
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+h1.title {
+    margin: 0px;
+    padding: 25px;
+}
+
 ul {
     list-style-type: none;
     display: flex;
+    width: 40px;
 }
+
+
+.content,
+.content>p {
+    display: flex;
+    background-color: rgb(80, 204, 163);
+    margin-right: 60px;
+}
+
+.content>p {
+    flex: 1;
+}
+
+
 
 /* NAVIGATION */
 
@@ -35,6 +63,7 @@ ul {
     display: flex;
     flex-direction: column;
     padding: 0 60px 0 20px;
+    margin-right: 30px;
 }
 
 div.people {
@@ -51,6 +80,12 @@ button {
     width: 90px;
     background-color: aquamarine;
 
+}
+
+#about {
+    margin-bottom: 20px;
+    font-size: large;
+    font-weight: 600;
 }
 
 button:hover {
@@ -72,8 +107,6 @@ p {
 /* DESCRIPTION */
 
 div.desc {
-    display: flex;
-    flex: 1;
     font-size: 30px;
 }
 
