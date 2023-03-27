@@ -1,38 +1,75 @@
 /* DEFAULT SETTINGS */
 * {
     font-family: Courier, monospace;
-    background-color: aquamarine;
     /* border: solid 1px; */
+    color: rgb(255, 255, 255);
 }
 
-
-
-#ponytown {
-    display: flex;
-    justify-content: center;
+body {
+    background-color: rgb(42, 42, 42);
 }
 
-#home-header {
+#header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    background-color: black;
+    border-bottom: solid 0.07rem white;
+    margin: -8px -8px 1rem -8px;
 }
 
-#home-header>h1 {
-    margin: 5px 0px 0px 0px;
-}
-
-#home-header>h2 {
-    margin: 5px 0px 0px 0px;
-}
-
-h1 {
+#header-links {
+    flex: 1;
     display: flex;
     justify-content: center;
-    text-decoration: underline;
 }
 
-h1.title {
+.header-link {
+    color: white;
+    font-size: 1.5rem;
+    background-color: black;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+
+#header-content {
+    background-color: black;
+}
+
+
+#logo {
+    padding: 1rem;
+}
+
+#logo-img {
+    width: 6rem;
+    margin-right: auto;
+    background-color: black;
+    align-self: center;
+}
+
+#spacer {
+    margin-left: auto;
+    width: 128px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(13, 13, 13);
+    position: absolute;
+    bottom: 0;
+    margin-left: -8px;
+    width: 100%;
+    height: 2.5rem;
+}
+
+
+
+h1.about {
+    display: flex;
+    justify-content: center;
     margin: 0px;
     padding: 25px;
 }
@@ -40,45 +77,29 @@ h1.title {
 ul {
     list-style-type: none;
     display: flex;
-    width: 40px;
+    margin: 0px;
+    padding: auto;
 }
 
 
-.content,
-.content>p {
+#projects {
     display: flex;
-    background-color: rgb(80, 204, 163);
-    margin-right: 60px;
+    align-items: center;
+    flex-direction: column;
 }
-
-.content>p {
-    flex: 1;
-}
-
 
 
 /* NAVIGATION */
 
-.nav-list {
-    display: flex;
-    flex-direction: column;
-    padding: 0 60px 0 20px;
-    margin-right: 30px;
-}
 
-div.people {
-    font-size: 20px;
-}
-
-div.projects {
-    font-size: 20px;
-    margin-top: 7px;
-}
 
 button {
-    height: 40px;
-    width: 90px;
-    background-color: aquamarine;
+    height: 4rem;
+    width: 8rem;
+    margin: 1rem;
+    background-color: rgb(0, 0, 0);
+    border: solid white 1px;
+    color: white;
 
 }
 
@@ -89,70 +110,6 @@ button {
 }
 
 button:hover {
-    opacity: 0.7;
-}
-
-a>img:hover {
-    opacity: 0.7;
-}
-
-/* MISC */
-p {
-    padding: 20px;
-    margin: 30px;
-}
-
-
-
-/* DESCRIPTION */
-
-div.desc {
-    font-size: 30px;
-}
-
-img.desc {
-    display: flex;
-    padding: 10px 10px 10px 10px;
-    margin: -10px;
-    height: 100px;
-    width: 100px;
-    align-self: center;
-}
-
-p.desc {
-    display: flex;
-    flex: 1 1 0;
-}
-
-/* INFO / OCCUPATION ETC */
-.info {
-    display: flex;
-    justify-content: center;
-}
-
-/* LIST OF ALLIES */
-.allies {
-    display: flex;
-    justify-content: center;
-}
-
-div.allies {
-    display: flex;
-}
-
-ul.allies {
-    padding: 20px;
-    margin: -20px;
-}
-
-ul.allies>li {
-    margin: 5px;
-    padding: 10px;
-
-}
-
-img.allies {
-    width: 80px;
-    height: 80px;
-    border: solid 3px aqua;
+    transition-duration: 150ms;
+    transform: scale(1.05);
 }
