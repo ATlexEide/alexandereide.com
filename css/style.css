@@ -5,8 +5,29 @@
     color: rgb(255, 255, 255);
 }
 
-body {
+#body {
     background-color: rgb(42, 42, 42);
+}
+
+#flash {
+    height: 3rem;
+    transition-duration: 2s;
+}
+
+#light-mode {
+    margin-left: auto;
+    width: 128px;
+}
+
+#light-mode-button:hover {
+    opacity: 70%;
+}
+
+#light-mode-button {
+    padding: 0;
+    border: none;
+    width: fit-content;
+    height: fit-content;
 }
 
 #header {
@@ -48,10 +69,6 @@ body {
     align-self: center;
 }
 
-#spacer {
-    margin-left: auto;
-    width: 128px;
-}
 
 #footer {
     display: flex;
