@@ -5,6 +5,27 @@
     color: rgb(255, 255, 255);
 }
 
+/*Social links*/
+.fa,
+.fa-brands {
+    color: rgb(255, 255, 255);
+    text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links>ul {
+    flex-direction: column;
+    padding: 0px;
+}
+
+.social-links>ul>li {
+    margin: 1rem;
+}
+
 #construction {
     display: block;
     width: 600px;
