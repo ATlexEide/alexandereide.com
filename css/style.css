@@ -22,11 +22,6 @@
     background-color: rgb(42, 42, 42);
 }
 
-#flash {
-    height: 3rem;
-    transition-duration: 2s;
-}
-
 #header {
     display: flex;
     justify-content: space-between;
