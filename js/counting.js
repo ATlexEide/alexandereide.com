@@ -28,5 +28,13 @@ submitBtn.addEventListener('click', () => {
     let oppgjør = registerSum - 1500;
     document.getElementById('rmSum').textContent = `Remove: ${oppgjør}`;
     // Get what to remove
+    for (let i = 0; i < register.length; i++) {
+        current = register[i].id
+        currentTextfield = document.getElementById(`rm${current}`)
+        currentTextfield.textContent = `${current}: `;
+        amount = Math.floor(oppgjør / current)
+        currentTextfield.textContent = `${current}: ${amount}`;
+        oppgjør = oppgjør - current * amount
+    }
 });
 
