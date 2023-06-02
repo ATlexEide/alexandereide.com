@@ -29,12 +29,16 @@ submitBtn.addEventListener('click', () => {
     document.getElementById('rmSum').textContent = `Remove: ${oppgjør}`;
     // Get what to remove
     for (let i = 0; i < register.length; i++) {
-        current = register[i].id
-        currentTextfield = document.getElementById(`rm${current}`)
-        currentTextfield.textContent = `${current}: `;
-        amount = Math.floor(oppgjør / current)
-        currentTextfield.textContent = `${current}: ${amount}`;
-        oppgjør = oppgjør - current * amount
+
+        const cashId = register[i].id;
+        const cashAmount = register[i].amount;
+        const textField = document.getElementById(`rm${cashId}`);
+        ////////////////////
+        let takeOut = Math.floor(oppgjør / cashId);
+        if (takeOut > cashAmount) { takeOut = cashAmount }
+        textField.textContent = `${cashId}: ${takeOut}`
+        oppgjør = oppgjør - takeOut * cashId;
+        console.log(`Take out: ${cashId}: ${takeOut}`)
     }
 });
 
