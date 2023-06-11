@@ -5,61 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counting</title>
+    <link rel="stylesheet" href="../css/countingUi.css">
     <script src="../js/counting.js" defer></script>
 </head>
 <body>
     <div class="content">
         <div id="valuta">
             <div id="lapper">
-                <div id="1000kr">
-                    1000: <input id="1000" type="number">
+                <div class="valuta-item" id="1000kr">
+                    <div class="valuta-text">1000:</div> <div class="valuta-input"><input id="1000" type="number"></div>
                 </div>    
-                <div id="500kr">
-                    500: <input id="500" type="number">
+                <div class="valuta-item" id="500kr">
+                    <div class="valuta-text">&nbsp;&nbsp;500:</div> <div class="valuta-input"><input id="500" type="number"></div>
                 </div>
-                <div id="200kr">
-                    200: <input id="200" type="number">
+                <div class="valuta-item" id="200kr">
+                    <div class="valuta-text">&nbsp;&nbsp;200:</div> <div class="valuta-input"><input id="200" type="number"></div>
                 </div>
-                <div id="100kr">
-                    100: <input id="100" type="number">
+                <div class="valuta-item" id="100kr">
+                    <div class="valuta-text">&nbsp;&nbsp;100:</div> <div class="valuta-input"><input id="100" type="number"></div>
                 </div>
-                <div id="50kr">
-                    50: <input id="50" type="number">
-                </div>
+                <div class="valuta-item" id="50kr">
+                    <div class="valuta-text">&nbsp;&nbsp;&nbsp;&nbsp;50:</div> <div class="valuta-input"><input id="50" type="number"></div>               </div>
             </div>
             <div id="mynter">
-                <div id="20kr">
-                    20: <input id="20" type="number">
-                </div>
-                <div id="10kr">
-                    10: <input id="10" type="number">
-                </div>
-                <div id="5kr">
-                    5: <input id="5" type="number">
-                </div>
-                <div id="1kr">
-                    1: <input id="1" type="number">
-                </div>
+                <div class="valuta-item" id="20kr">
+                    <div class="valuta-text">&nbsp;&nbsp;&nbsp;&nbsp;20:</div> <div class="valuta-input"><input id="20" type="number"></div>               </div>
+                <div class="valuta-item" id="10kr">
+                    <div class="valuta-text">&nbsp;&nbsp;&nbsp;&nbsp;10:</div> <div class="valuta-input"><input id="10" type="number"></div>               </div>
+                <div class="valuta-item" id="5kr">
+                    <div class="valuta-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5:</div> <div class="valuta-input"><input id="5" type="number"></div>              </div>
+                <div class="valuta-item" id="1kr">
+                    <div class="valuta-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:</div> <div class="valuta-input"><input id="1" type="number"></div>              </div>
             </div>
         </div>
         <div>
             <button id="submitBtn" >SUM</button>
         </div>
-        <div id="registerSum">
-            Sum in register:
-        </div>
-
-        <div>
-            <div id="rmSum">Remove: </div>
-            <div id="rm1000"></div>
-            <div id="rm500"></div>
-            <div id="rm200"></div>
-            <div id="rm100"></div>
-            <div id="rm50"></div>
-            <div id="rm20"></div>
-            <div id="rm10"></div>
-            <div id="rm5"></div>
-            <div id="rm1"></div>
+        <div id="removeInfo">
+            <div id="registerSum">
+                Sum in register:
+            </div>
+            <div>
+                <div id="rmSum">Remove: </div>
+                <div id="rm1000"></div>
+                <div id="rm500"></div>
+                <div id="rm200"></div>
+                <div id="rm100"></div>
+                <div id="rm50"></div>
+                <div id="rm20"></div>
+                <div id="rm10"></div>
+                <div id="rm5"></div>
+                <div id="rm1"></div>
+            </div>
         </div>
     </div>
 </body>

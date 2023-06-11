@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(42, 42, 42);
+    color: white;
+}
+
+.content {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-large;
+}
+
+.valuta-item {
+    display: flex;
+    margin: 10px;
+}
+
+.valuta-text {
+    margin-right: 0.5rem;
+}
+
+.valuta-input {
+    margin-left: auto;
+    margin-right: 34.45px;
+}
+
+#removeInfo {}
