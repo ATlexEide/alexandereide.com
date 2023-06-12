@@ -18,7 +18,6 @@ submitBtn.addEventListener('click', () => {
     for (let i = 0; i < money.length; i++) {
         if (money[i].value > 0) { register.push({ id: money[i].id, amount: money[i].value, total: money[i].id * money[i].value }) }
     }
-    console.log(register)
     // Sum total in register
     const registerSum = register.reduce((total, register) => {
         return total + register.total
@@ -38,7 +37,6 @@ submitBtn.addEventListener('click', () => {
         if (takeOut > cashAmount) { takeOut = cashAmount }
         if (takeOut > 0) { textField.textContent = `${cashId}: ${takeOut}` }
         oppgjør = oppgjør - takeOut * cashId;
-        console.log(`Take out: ${cashId}: ${takeOut}`)
     }
 });
 
