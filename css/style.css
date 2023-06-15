@@ -39,7 +39,7 @@
 }
 
 #body {
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(99, 99, 99);
 }
 
 #header {
@@ -58,12 +58,16 @@
 }
 
 .header-link {
+    text-decoration: dashed;
     color: white;
     font-size: 1.5rem;
     background-color: black;
     padding: 1rem 1rem 1rem 1rem;
 }
 
+.header-link>a {
+    text-decoration: none;
+}
 
 #header-content {
     background-color: black;
@@ -123,6 +127,14 @@ p {
     line-height: 1.5rem;
 }
 
+.brødtekst {
+    padding: 3rem;
+    background-color: rgb(82, 82, 82);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* NAVIGATION */
 
 
@@ -131,10 +143,15 @@ button {
     height: 4rem;
     width: 8rem;
     margin: 1rem;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(82 82 82);
     border: solid white 1px;
     color: white;
+    border-radius: 1rem;
+}
 
+.social-icon-link:hover {
+    transition-duration: 150ms;
+    transform: scale(1.1);
 }
 
 #about {
