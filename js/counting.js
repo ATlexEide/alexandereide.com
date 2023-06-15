@@ -16,8 +16,9 @@ const submitBtn = document.getElementById('submitBtn');
 submitBtn.addEventListener('click', () => {
     register = []
     for (let i = 0; i < money.length; i++) {
-        //Empty textfield for items to remove
+        // Empty textfield for items to remove
         document.getElementById(`rm${money[i].id}`).textContent = ''
+        // Add object to register
         if (money[i].value > 0) { register.push({ id: money[i].id, amount: money[i].value, total: money[i].id * money[i].value }) }
     }
     // Empty the textfields for amount to remove
