@@ -38,16 +38,24 @@
     margin: 0px;
 }
 
-#body {
-    background-color: rgb(99, 99, 99);
+html {
+    height: 99vh;
+}
+
+body {
+    /*background-color: rgb(51 46 46);*/
+    background: linear-gradient(45deg, #9b2c9b, #5c2870, rgb(40, 36, 65), rgb(51 46 46));
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    border-bottom: solid 0.07rem white;
+    /*border-bottom: solid 1rem;*/
+    background-color: rgba(128, 128, 128, 0.1);
+    padding-bottom: 0.05em;
     margin: -8px -8px 1rem -8px;
 }
 
@@ -61,7 +69,7 @@
     text-decoration: dashed;
     color: white;
     font-size: 1.5rem;
-    background-color: black;
+    background-color: transparent;
     padding: 1rem 1rem 1rem 1rem;
 }
 
@@ -81,7 +89,7 @@
 #logo-img {
     width: 6rem;
     margin-right: auto;
-    background-color: black;
+    background-color: transparent;
     align-self: center;
 }
 
@@ -90,7 +98,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(13, 13, 13);
+    background-color: #4b184b2f;
     position: absolute;
     bottom: 0;
     margin-left: -8px;
@@ -129,7 +137,7 @@ p {
 
 .brødtekst {
     padding: 3rem;
-    background-color: rgb(82, 82, 82);
+    background-color: rgba(128, 128, 128, 0.2);
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -144,7 +152,7 @@ button {
     height: 4rem;
     width: 8rem;
     margin: 1rem;
-    background-color: rgb(82 82 82);
+    background-color: rgba(128, 128, 128, 0.2);
     border: solid white 1px;
     color: white;
     border-radius: 1rem;
