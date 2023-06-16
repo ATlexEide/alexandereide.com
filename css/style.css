@@ -98,7 +98,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #4b184b2f;
+    background-color: rgba(99, 99, 99, 0.219);
     position: absolute;
     bottom: 0;
     margin-left: -8px;
