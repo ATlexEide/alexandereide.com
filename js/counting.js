@@ -39,7 +39,7 @@ submitBtn.addEventListener('click', () => {
         ////////////////////
         let takeOut = Math.floor(oppgjør / cashId);
         if (takeOut > cashAmount) { takeOut = cashAmount }
-        if (takeOut > 0) { textField.textContent = `${cashId}: ${takeOut}` }
+        if (takeOut > 0) { textField.textContent = `${cashId}: ${takeOut} = ${cashId * takeOut}kr` }
         oppgjør = oppgjør - takeOut * cashId;
     }
 });
