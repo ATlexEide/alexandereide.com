@@ -1,4 +1,4 @@
-const version = '0.3.4';
+const version = '0.3.5';
 document.getElementById('stylesheet').href = `../css/countingUi.css?v=${version}`;
 document.getElementById('js').src = `../js/counting.js${version}`;
 let register = [];
