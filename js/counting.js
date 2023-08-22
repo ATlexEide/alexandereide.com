@@ -1,3 +1,4 @@
+const version = '0.3.4';
 let register = [];
 // valuta
 let money = [
@@ -50,4 +51,3 @@ submitBtn.addEventListener('click', () => {
     }, 0);
     if (coinsSummed > 0) { document.getElementById('mynt').textContent = `Mynt: ${coinsSummed}kr` }
 });
-
