@@ -18,10 +18,11 @@ submitBtn.addEventListener('click', () => {
     for (let i = 0; i < money.length; i++) {
         // Empty textfield for items to remove
         document.getElementById(`rm${money[i].id}`).textContent = ''
+        document.getElementById(`mynt`).textContent = ''
         // Add object to register
-        if (money[i].value > 0) { register.push({ id: money[i].id, amount: money[i].value, total: money[i].id * money[i].value }) }
+        if (money[i].value > 0 && money[i].id >= 50) { register.push({ id: money[i].id, isCoin: false, amount: money[i].value, total: money[i].id * money[i].value }) }
+        if (money[i].value > 0 && money[i].id < 50) { register.push({ id: money[i].id, isCoin: true, amount: money[i].value, total: money[i].id * money[i].value }) }
     }
-    // Empty the textfields for amount to remove
     // Sum total in register
     const registerSum = register.reduce((total, register) => {
         return total + register.total
@@ -31,6 +32,7 @@ submitBtn.addEventListener('click', () => {
     let oppgjør = registerSum - 1500;
     document.getElementById('rmSum').textContent = `Remove: ${oppgjør}`;
     // Get what to remove
+    let coins = []
     for (let i = 0; i < register.length; i++) {
 
         const cashId = register[i].id;
@@ -39,8 +41,13 @@ submitBtn.addEventListener('click', () => {
         ////////////////////
         let takeOut = Math.floor(oppgjør / cashId);
         if (takeOut > cashAmount) { takeOut = cashAmount }
-        if (takeOut > 0) { textField.textContent = `${cashId}: ${takeOut} = ${cashId * takeOut}kr` }
+        if (takeOut > 0 && register[i].isCoin === false) { textField.textContent = `${cashId}: ${takeOut} = ${cashId * takeOut}kr` }
+        else if (takeOut > 0 && register[i].isCoin === true) { coins.push(cashId * takeOut), textField.textContent = `${cashId}: ${takeOut}` }
         oppgjør = oppgjør - takeOut * cashId;
     }
+    const coinsSummed = coins.reduce((acc, curr) => {
+        return acc + curr
+    }, 0);
+    if (coinsSummed > 0) { document.getElementById('mynt').textContent = `Mynt: ${coinsSummed}kr` }
 });
 
