@@ -1,6 +1,6 @@
-const version = '0.3.5';
+const version = '0.3.6';
 document.getElementById('stylesheet').href = `../css/countingUi.css?v=${version}`;
-document.getElementById('js').src = `../js/counting.js${version}`;
+document.getElementById('js').src = `../js/counting.js?v=${version}`;
 let register = [];
 // valuta
 let money = [
