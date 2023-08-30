@@ -5,6 +5,18 @@
     overflow: hidden;
 }
 
+#wip {
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+#wip>div:last-child {
+    font-size: 10rem;
+}
+
 /*Social links*/
 .fa,
 .fa-brands {
