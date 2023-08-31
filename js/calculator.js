@@ -26,4 +26,19 @@ function operate(firstNumber, operator, secondNumber) {
     return
 };
 
-operate(10, "*", 6)
+const numberButtons = [];
+function test() {
+    let displayValue = '';
+    for (let i = 0; i < 10; i++) {
+        document.getElementById(`button${i}`).addEventListener('click', () => {
+            let currentValue = document.getElementById(`button${i}`).textContent;
+            displayValue += currentValue.toString();
+            const display = document.getElementById('display').textContent = `${displayValue}`;
+        })
+    };
+};
+//document.getElementById(`button${i}`).addEventListener('click', () => {
+//  displayValue += `button${i}`
+//console.log('hi')
+//};
+test()
