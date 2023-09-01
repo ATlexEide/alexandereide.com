@@ -78,7 +78,7 @@ function clearButton() {
 };
 
 function clear() {
-    firstNumber = ;
+    firstNumber = null;
     secondNumber = null;
     operator = null;
     displayValue = null;
