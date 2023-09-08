@@ -2,6 +2,9 @@ body {
     background-color: rgb(66, 66, 66);
 }
 
+
+
+
 #calculatorBody {
     position: absolute;
     top: 50%;
@@ -35,13 +38,41 @@ button:hover {
 
 .numberButton,
 .operatorButton,
-#enter {
+[id^="="] {
     aspect-ratio: 1;
     width: 4rem;
     background-color: #3ee1f0;
 }
 
-#button0 {
+button {
+    margin: 0;
+    /*animation: 0.7s ease-in 1 load;*/
+}
+
+@media only screen and (max-device-width: 768px) {
+
+    .numberButton,
+    .operatorButton,
+    [id^="'='"] {
+        aspect-ratio: 1;
+        width: 4rem;
+        background-color: #3ee1f0;
+    }
+
+    #clearButton {}
+}
+
+@keyframes load {
+    0% {
+        margin: 3rem;
+    }
+
+    100% {
+        margin: 0;
+    }
+}
+
+[id^="0"] {
     aspect-ratio: 2/1;
     width: 8rem;
 }
@@ -51,7 +82,7 @@ button:hover {
     color: #ffff;
 }
 
-#enter {
+[id^="="] {
     background-color: #eaff00;
 
 }
