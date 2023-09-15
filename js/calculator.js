@@ -1,3 +1,6 @@
+///////////////////////////////////////////////////////////////////////////////
+// Operation functions                                                      ///
+///////////////////////////////////////////////////////////////////////////////
 function add(num, num2) {
     return Number(num) + Number(num2);
 };
@@ -42,7 +45,8 @@ function clear() {
 };
 
 ///////////////////////////////////////////////////////////////////////////////
-
+// Button variables and shit                                                ///
+///////////////////////////////////////////////////////////////////////////////
 const numberButtons = document.getElementsByClassName('numberButton');
 const operatorButtons = document.getElementsByClassName('operatorButton');
 const enterButton = document.getElementById('=');
@@ -50,56 +54,36 @@ const clearButton = document.getElementById('clearButton');
 let digitArray = [];
 let numberArray = [];
 const calculatorDisplay = document.getElementById('display');
-
-// Push digits to an array for later use and display them on screen
+///////////////////////////////////////////////////////////////////////////////
+// Push digits to an array for later use and display them on screen         ///
+///////////////////////////////////////////////////////////////////////////////
 for (let i = 0; i < numberButtons.length; i++) {
     numberButtons[i].addEventListener('click', () => {
-        digitArray.push(numberButtons[i].textContent);
-        let digitString = digitArray.join('');
-        calculatorDisplay.textContent = digitString;
-    })
-}
-
-// Pushes another number and the operator to array 
-for (let i = 0; i < operatorButtons.length; i++) {
-    operatorButtons[i].addEventListener('click', () => {
-        calculatorDisplay.textContent = operatorButtons[i].id;
-        numberObj = { number: digitArray.join(''), operator: operatorButtons[i].id };
-        numberArray.push(numberObj)
-        digitArray = [];
-
+        digitArray.push(numberButtons[i].id);
+        calculatorDisplay.textContent = digitArray.join('')
     })
 };
-
-// Finalizes the operation
-enterButton.addEventListener('click', () => {
-    numberObj = { number: digitArray.join(''), operator: '=' };
-    //    numberArray.push(digitArray.join(''));
-    numberArray.push(numberObj)
-    // Sorts the operations with pemdas
-    numberArray.forEach(numberObj => {
-        numberObj.operator === '=' ? numberObj.weight = 5 :
-            numberObj.operator === '-' ? numberObj.weight = 4 :
-                numberObj.operator === '+' ? numberObj.weight = 3 :
-                    numberObj.operator === '/' ? numberObj.weight = 2 :
-                        numberObj.operator === '*' ? numberObj.weight = 1 : alert('Error')
+///////////////////////////////////////////////////////////////////////////////
+// Put the number in another array to save for later                        ///
+///////////////////////////////////////////////////////////////////////////////
+for (let i = 0; i < operatorButtons.length; i++) {
+    operatorButtons[i].addEventListener('click', () => {
+        let stringForThaNumbers = digitArray.join('');
+        numberArray.push(stringForThaNumbers);
+        //// Clears the display so we can add more numbas ////
+        calculatorDisplay.textContent = '';
+        digitArray = [];
+        console.log(numberArray) // Reminder to self, remove this later
     });
-    console.table(numberArray)
-    let swapped;
-    do {
-        swapped = false;
-        for (let i = 0; i < numberArray.length - 1; i++) {
-            if (numberArray[i]['weight'] > numberArray[i + 1]['weight']) {
-                let temp = numberArray[i];
-                numberArray[i] = numberArray[i + 1];
-                numberArray[i + 1] = temp;
-                swapped = true;
-            }
-            //console.table(numberArray)
-        }
-    } while (swapped);
-    console.table(numberArray)
-    digitArray = [];
-    operationString = numberArray.join(' ');
-
+};
+///////////////////////////////////////////////////////////////////////////////
+// Throw the last number into the array and do the calculation stuff        ///
+///////////////////////////////////////////////////////////////////////////////
+enterButton.addEventListener('click', () => {
+    let anotherStringForMoarNumbers = digitArray.join('');
+    numberArray.push(anotherStringForMoarNumbers); // Reminder to self, remove this later
+    console.log(numberArray)
 });
+///////////////////////////////////////////////////////////////////////////////
+// Now the hard part ):                                                     ///
+///////////////////////////////////////////////////////////////////////////////
