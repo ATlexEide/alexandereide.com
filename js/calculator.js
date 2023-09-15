@@ -69,7 +69,7 @@ for (let i = 0; i < numberButtons.length; i++) {
 for (let i = 0; i < operatorButtons.length; i++) {
     operatorButtons[i].addEventListener('click', () => {
         let stringForThaNumbers = digitArray.join('');
-        numberArray.push(stringForThaNumbers);
+        numberArray.push(stringForThaNumbers, operatorButtons[i].id);
         //// Clears the display so we can add more numbas ////
         calculatorDisplay.textContent = '';
         digitArray = [];
@@ -81,9 +81,16 @@ for (let i = 0; i < operatorButtons.length; i++) {
 ///////////////////////////////////////////////////////////////////////////////
 enterButton.addEventListener('click', () => {
     let anotherStringForMoarNumbers = digitArray.join('');
-    numberArray.push(anotherStringForMoarNumbers); // Reminder to self, remove this later
-    console.log(numberArray)
+    numberArray.push(anotherStringForMoarNumbers);
+    console.log(numberArray) // Reminder to self, remove this later
+    calculate()
 });
 ///////////////////////////////////////////////////////////////////////////////
 // Now the hard part ):                                                     ///
 ///////////////////////////////////////////////////////////////////////////////
+function calculate() {
+    const pemdas = ['*', '/', '+', '-'];
+    for (let i = 0; i < numberArray.length; i++) {
+        if (numberArray[i] === pemdas[0]) { console.log(multiply(numberArray[i - 1], numberArray[i + 1])) }
+    };
+};
