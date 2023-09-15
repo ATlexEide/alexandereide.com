@@ -17,33 +17,6 @@ function divide(num, num2) {
     return num / num2;
 };
 
-function operate(firstNumber, operator, secondNumber) {
-    let result;
-    if (operator === '+') {
-        result = add(firstNumber, secondNumber);
-    } else if (operator === '-') {
-        result = subtract(firstNumber, secondNumber);
-    } else if (operator === '*') {
-        result = multiply(firstNumber, secondNumber);
-    } else if (operator === '/') {
-        result = divide(firstNumber, secondNumber);
-    } else {
-        result = 'Error';
-    }
-    display.textContent = result.toString();
-    return result;
-};
-
-function convertArrayToString(array) {
-    array = array.join('');
-    return array;
-}
-
-function clear() {
-    displayValueArray = [];
-    display.textContent = '';
-};
-
 ///////////////////////////////////////////////////////////////////////////////
 // Button variables and shit                                                ///
 ///////////////////////////////////////////////////////////////////////////////
@@ -73,7 +46,6 @@ for (let i = 0; i < operatorButtons.length; i++) {
         //// Clears the display so we can add more numbas ////
         calculatorDisplay.textContent = '';
         digitArray = [];
-        console.log(numberArray) // Reminder to self, remove this later
     });
 };
 ///////////////////////////////////////////////////////////////////////////////
@@ -94,40 +66,32 @@ function calculate() {
     for (let i = 0; i < numberArray.length; i++) {
         let calculatedNumber = [];
         if (numberArray[i] === pemdas[0]) {
-            calculatedNumber.push(multiply(numberArray[i - 1], numberArray[i + 1]))
-            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''))
-            console.log(`numberArray: ${numberArray}`) // Reminder to self, remove this later
-            console.log(`test: ${spliced}`)
+            calculatedNumber.push(multiply(numberArray[i - 1], numberArray[i + 1]));
+            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
         };
     };
     for (let i = 0; i < numberArray.length; i++) {
         let calculatedNumber = [];
         if (numberArray[i] === pemdas[1]) {
-            calculatedNumber.push(divide(numberArray[i - 1], numberArray[i + 1]))
-            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''))
-            console.log(`numberArray: ${numberArray}`) // Reminder to self, remove this later
-            console.log(`test: ${spliced}`)
+            calculatedNumber.push(divide(numberArray[i - 1], numberArray[i + 1]));
+            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
         };
     };
     for (let i = 0; i < numberArray.length; i++) {
         let calculatedNumber = [];
         if (numberArray[i] === pemdas[2]) {
-            calculatedNumber.push(add(numberArray[i - 1], numberArray[i + 1]))
-            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''))
-            console.log(`numberArray: ${numberArray}`) // Reminder to self, remove this later
-            console.log(`test: ${spliced}`)
+            calculatedNumber.push(add(numberArray[i - 1], numberArray[i + 1]));
+            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
         };
     };
     for (let i = 0; i < numberArray.length; i++) {
         let calculatedNumber = [];
         if (numberArray[i] === pemdas[3]) {
-            calculatedNumber.push(subtract(numberArray[i - 1], numberArray[i + 1]))
-            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''))
-            console.log(`numberArray: ${numberArray}`) // Reminder to self, remove this later
-            console.log(`test: ${spliced}`)
+            calculatedNumber.push(subtract(numberArray[i - 1], numberArray[i + 1]));
+            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
         };
     };
-    return numberArray
+    return numberArray;
 };
 ///////////////////////////////////////////////////////////////////////////////
 // Clear button                                                             ///
@@ -136,4 +100,4 @@ clearButton.addEventListener('click', () => {
     numberArray = [];
     digitArray = [];
     calculatorDisplay.textContent = '';
-})
+});
