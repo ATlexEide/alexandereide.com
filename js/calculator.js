@@ -82,8 +82,7 @@ for (let i = 0; i < operatorButtons.length; i++) {
 enterButton.addEventListener('click', () => {
     let anotherStringForMoarNumbers = digitArray.join('');
     numberArray.push(anotherStringForMoarNumbers);
-    console.log(numberArray) // Reminder to self, remove this later
-    calculate()
+    calculatorDisplay.textContent = `${calculate()}`;
 });
 ///////////////////////////////////////////////////////////////////////////////
 // Now the hard part ):                                                     ///
@@ -91,6 +90,40 @@ enterButton.addEventListener('click', () => {
 function calculate() {
     const pemdas = ['*', '/', '+', '-'];
     for (let i = 0; i < numberArray.length; i++) {
-        if (numberArray[i] === pemdas[0]) { console.log(multiply(numberArray[i - 1], numberArray[i + 1])) }
+        let calculatedNumber = [];
+        if (numberArray[i] === pemdas[0]) {
+            calculatedNumber.push(multiply(numberArray[i - 1], numberArray[i + 1]))
+            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''))
+            console.log(`numberArray: ${numberArray}`) // Reminder to self, remove this later
+            console.log(`test: ${spliced}`)
+        };
     };
+    for (let i = 0; i < numberArray.length; i++) {
+        let calculatedNumber = [];
+        if (numberArray[i] === pemdas[1]) {
+            calculatedNumber.push(divide(numberArray[i - 1], numberArray[i + 1]))
+            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''))
+            console.log(`numberArray: ${numberArray}`) // Reminder to self, remove this later
+            console.log(`test: ${spliced}`)
+        };
+    };
+    for (let i = 0; i < numberArray.length; i++) {
+        let calculatedNumber = [];
+        if (numberArray[i] === pemdas[2]) {
+            calculatedNumber.push(add(numberArray[i - 1], numberArray[i + 1]))
+            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''))
+            console.log(`numberArray: ${numberArray}`) // Reminder to self, remove this later
+            console.log(`test: ${spliced}`)
+        };
+    };
+    for (let i = 0; i < numberArray.length; i++) {
+        let calculatedNumber = [];
+        if (numberArray[i] === pemdas[3]) {
+            calculatedNumber.push(subtract(numberArray[i - 1], numberArray[i + 1]))
+            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''))
+            console.log(`numberArray: ${numberArray}`) // Reminder to self, remove this later
+            console.log(`test: ${spliced}`)
+        };
+    };
+    return numberArray
 };
