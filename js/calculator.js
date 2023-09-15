@@ -83,6 +83,8 @@ enterButton.addEventListener('click', () => {
     let anotherStringForMoarNumbers = digitArray.join('');
     numberArray.push(anotherStringForMoarNumbers);
     calculatorDisplay.textContent = `${calculate()}`;
+    numberArray = [];
+    digitArray = [];
 });
 ///////////////////////////////////////////////////////////////////////////////
 // Now the hard part ):                                                     ///
@@ -127,3 +129,11 @@ function calculate() {
     };
     return numberArray
 };
+///////////////////////////////////////////////////////////////////////////////
+// Clear button                                                             ///
+///////////////////////////////////////////////////////////////////////////////
+clearButton.addEventListener('click', () => {
+    numberArray = [];
+    digitArray = [];
+    calculatorDisplay.textContent = '';
+})
