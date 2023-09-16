@@ -64,35 +64,47 @@ enterButton.addEventListener('click', () => {
 function calculate() {
     const pemdas = ['*', '/', '+', '-'];
     for (let i = 0; i < numberArray.length; i++) {
+        console.log(`numberArray: ${numberArray.join('')}`)
         let calculatedNumber = [];
-        if (numberArray[i] === pemdas[0]) {
-            calculatedNumber.push(multiply(numberArray[i - 1], numberArray[i + 1]));
-            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
-        };
+        if (numberArray[i] === pemdas[0] || numberArray[i] === pemdas[1]) {
+            if (numberArray[i] === pemdas[0]) {
+                calculatedNumber.push(multiply(numberArray[i - 1], numberArray[i + 1]));
+                let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
+                console.log(`1 numberArray: ${numberArray.join('')}`)
+                console.log(`calculatedNumber: ${calculatedNumber}`)
+                console.log(`updatedArray: ${numberArray.join('')}`)
+            } else if (numberArray[i] === pemdas[1]) {
+                calculatedNumber.push(divide(numberArray[i - 1], numberArray[i + 1]));
+                let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
+                console.log(`2 numberArray: ${numberArray.join('')}`)
+                console.log(`calculatedNumber: ${calculatedNumber}`)
+                console.log(`updatedArray: ${numberArray.join('')}`)
+            }
+        }
     };
+
     for (let i = 0; i < numberArray.length; i++) {
         let calculatedNumber = [];
-        if (numberArray[i] === pemdas[1]) {
-            calculatedNumber.push(divide(numberArray[i - 1], numberArray[i + 1]));
-            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
-        };
+        if (numberArray[i] === pemdas[2] || numberArray[i] === pemdas[3]) {
+            if (numberArray[i] === pemdas[2]) {
+                calculatedNumber.push(add(numberArray[i - 1], numberArray[i + 1]));
+                let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
+                console.log(`4 numberArray: ${numberArray.join('')}`)
+                console.log(`calculatedNumber: ${calculatedNumber}`)
+                console.log(`updatedArray: ${numberArray.join('')}`)
+            } else if (numberArray[i] === pemdas[3]) {
+                calculatedNumber.push(subtract(numberArray[i - 1], numberArray[i + 1]));
+                let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
+                console.log(`5 numberArray: ${numberArray.join('')}`)
+                console.log(`calculatedNumber: ${calculatedNumber}`)
+                console.log(`updatedArray: ${numberArray.join('')}`)
+            }
+        }
     };
-    for (let i = 0; i < numberArray.length; i++) {
-        let calculatedNumber = [];
-        if (numberArray[i] === pemdas[2]) {
-            calculatedNumber.push(add(numberArray[i - 1], numberArray[i + 1]));
-            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
-        };
-    };
-    for (let i = 0; i < numberArray.length; i++) {
-        let calculatedNumber = [];
-        if (numberArray[i] === pemdas[3]) {
-            calculatedNumber.push(subtract(numberArray[i - 1], numberArray[i + 1]));
-            let spliced = numberArray.splice(i - 1, 3, calculatedNumber.join(''));
-        };
-    };
+
     return numberArray;
 };
+
 ///////////////////////////////////////////////////////////////////////////////
 // Clear button                                                             ///
 ///////////////////////////////////////////////////////////////////////////////
