@@ -17,10 +17,8 @@ function createPost(title, text) {
 
 const button = document.getElementById('test');
 button.addEventListener('click', () => {
-    if (!inputTitle.value || !inputTextContent.value) {
-        alert('Missing argument')
+    if (inputTitle.value && inputTextContent.value) {
+        createPost(inputTitle.value.toString(), inputTextContent.value.toString())
     }
-    if (inputTitle.value !== '' && inputTextContent.value !== '') {
-        createPost(inputTitle.value, inputTextContent.value)
-    }
+    else { alert('Missing argument') }
 })

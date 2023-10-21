@@ -3,10 +3,16 @@ button {
     width: 69px;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
 article {
     background: rgb(119, 173, 234);
     width: 250px;
     height: 250px;
+    padding: 10px;
 }
 
 article h1 {
@@ -16,4 +22,5 @@ article h1 {
 
 article p {
     font-size: larger;
+    padding: 10px;
 }
