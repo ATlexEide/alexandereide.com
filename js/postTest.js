@@ -17,6 +17,10 @@ function createPost(title, text) {
 
 const button = document.getElementById('test');
 button.addEventListener('click', () => {
-    console.log('yipp')
-    createPost(inputTitle.value, inputTextContent.value)
+    if (!inputTitle.value || !inputTextContent.value) {
+        alert('Missing argument')
+    }
+    if (inputTitle.value !== '' && inputTextContent.value !== '') {
+        createPost(inputTitle.value, inputTextContent.value)
+    }
 })
