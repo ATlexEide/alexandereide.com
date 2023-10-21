@@ -1,0 +1,19 @@
+button {
+    aspect-ratio: 16/9;
+    width: 69px;
+}
+
+article {
+    background: rgb(119, 173, 234);
+    width: 250px;
+    height: 250px;
+}
+
+article h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+article p {
+    font-size: larger;
+}
