@@ -1,19 +1,29 @@
 const page = document.querySelector('main')
 const inputTitle = document.getElementById('title');
 const inputTextContent = document.getElementById('content');
-const article = document.createElement('article');
-const header = document.createElement('h1');
+
+
 const content = document.createElement('p');
 
 
 function createPost(title, text) {
-    page.appendChild(article)
-    article.appendChild(header)
-    article.appendChild(content)
+    let article = document.createElement('article')
+    page.appendChild(article);
+    let header = document.createElement('h1');
     header.textContent = title;
+    article.appendChild(header);
+    let content = document.createElement('p');
     content.textContent = text;
+    article.appendChild(content);
+    let deleteBtn = document.createElement('button');
+    deleteBtn.setAttribute('class', 'delete-button');
+    deleteBtn.textContent = 'Delete';
+    article.appendChild(deleteBtn);
 };
 
+function deletePost() {
+
+};
 
 const button = document.getElementById('test');
 button.addEventListener('click', () => {
