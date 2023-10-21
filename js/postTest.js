@@ -3,9 +3,6 @@ const inputTitle = document.getElementById('title');
 const inputTextContent = document.getElementById('content');
 
 
-const content = document.createElement('p');
-
-
 function createPost(title, text) {
     let article = document.createElement('article')
     page.appendChild(article);
