@@ -1,2 +1,2 @@
-# my-test-site
-A place where i just play around with what i learn and get used to the tools
+# alexandereide.com
+My personal site where I play around with and test things I learn as I dive into software engineering
