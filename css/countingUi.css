@@ -20,8 +20,10 @@ body {
     margin: 10px;
 }
 
-.valuta-text {
-    margin-right: 0.5rem;
+label {
+    display: inline-block;
+    width: 70px;
+    text-align: end;
 }
 
 .valuta-input>input {
