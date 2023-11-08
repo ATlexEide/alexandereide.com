@@ -1,4 +1,4 @@
-const version = '0.3.6';
+const version = '0.4.6';
 document.getElementById('stylesheet').href = `../css/countingUi.css?v=${version}`;
 document.getElementById('js').src = `../js/counting.js?v=${version}`;
 let register = [];
@@ -44,12 +44,14 @@ submitBtn.addEventListener('click', () => {
         ////////////////////
         let takeOut = Math.floor(oppgjør / cashId);
         if (takeOut > cashAmount) { takeOut = cashAmount }
-        if (takeOut > 0 && register[i].isCoin === false) { textField.textContent = `${cashId}: ${takeOut} = ${cashId * takeOut}kr` }
-        else if (takeOut > 0 && register[i].isCoin === true) { coins.push(cashId * takeOut), textField.textContent = `${cashId}: ${takeOut}` }
+        console.log(`cashID: ${cashId}  cashAmount: ${cashAmount}  takeOut: ${takeOut}`)
+        if (takeOut > 0 && takeOut == cashAmount && !register[i].isCoin) { textField.textContent = `${cashId}: ALL(${takeOut}) = ${cashId * takeOut} kr` }
+        else if (takeOut > 0 && !register[i].isCoin) { textField.textContent = `${cashId}: ${takeOut} = ${cashId * takeOut} kr` }
+        else if (takeOut > 0 && register[i].isCoin) { coins.push(cashId * takeOut), textField.textContent = `${cashId}: ${takeOut} ` }
         oppgjør = oppgjør - takeOut * cashId;
     }
     const coinsSummed = coins.reduce((acc, curr) => {
         return acc + curr
     }, 0);
-    if (coinsSummed > 0) { document.getElementById('mynt').textContent = `Mynt: ${coinsSummed}kr` }
+    if (coinsSummed > 0) { document.getElementById('mynt').textContent = `Mynt: ${coinsSummed} kr` }
 });
