@@ -53,5 +53,5 @@ submitBtn.addEventListener('click', () => {
     const coinsSummed = coins.reduce((acc, curr) => {
         return acc + curr
     }, 0);
-    if (coinsSummed > 0) { document.getElementById('mynt').textContent = `Mynt: ${coinsSummed} kr` }
+    if (coinsSummed > 0) { document.getElementById('mynt').textContent = `Mynt: ${coinsSummed}kr` }
 });
